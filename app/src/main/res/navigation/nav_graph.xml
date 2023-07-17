@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentAirSchedule">
+
+    <fragment
+        android:id="@+id/fragmentAirSchedule"
+        android:name="com.example.wenjiezhou_shengwang_comp304sec002_lab04.FragmentAirSchedule"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_air_schedule">
+        <action
+            android:id="@+id/action_fragmentAirSchedule_to_fragmentDetailedSchedule"
+            app:destination="@id/fragmentDetailedSchedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailedSchedule"
+        android:name="com.example.wenjiezhou_shengwang_comp304sec002_lab04.FragmentDetailedSchedule"
+        android:label="{airlineName}"
+        tools:layout="@layout/fragment_detailed_schedule">
+        <argument
+            android:name="airlineName"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
